@@ -1,14 +1,4 @@
-const addValues = (arr, value) => {
-    arr.push(value);
-};
 
-const addNumbers = (number, arr, numberOfTime, callback) => {
-    for (let i = 0; i < numberOfTime; i++) {
-        callback(arr, number);
-      }
-      return arr;
-};
-'use strict';
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 1
