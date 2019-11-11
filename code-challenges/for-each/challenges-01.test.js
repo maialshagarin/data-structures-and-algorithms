@@ -1,15 +1,3 @@
-const addValues = (arr, value) => {
-    arr.push(value);
-};
-
-const addNumbers = (number, arr, numberOfTime, callback) => {
-    for (let i = 0; i < numberOfTime; i++) {
-        callback(arr, number);
-      }
-      return arr;
-};
-'use strict';
-
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 1
 
@@ -21,7 +9,7 @@ Then, write a function named speaker that takes in a string and a callback funct
 const greeting = (word) => {
     return word.toUpperCase();   // Solution code here...
 };
-
+                           
 const speaker = (message, callback) => {
     return callback(message);  // Solution code here...
 };
@@ -77,7 +65,7 @@ const removeElements = (arr, callback) => {
     for (let i = 0; i < arr.length; i++) {
         callback(arr[i], arr);
       }
-      return arr; // Solution code here...
+      return arr; 
 };
 
 /* ------------------------------------------------------------------------------------------------
