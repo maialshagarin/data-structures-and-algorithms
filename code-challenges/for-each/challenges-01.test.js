@@ -1,8 +1,4 @@
-<<<<<<< HEAD
-=======
-
-
->>>>>>> 7bab0de9826d5ae84dc9e66541d13016d6be2274
+'use strict';
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 1
 
@@ -95,14 +91,14 @@ This anonymous function should accept up to three arguments: the element, the in
 ------------------------------------------------------------------------------------------------ */
 
 const removeWithAnon = (arr) => {
-  arr.forEach(mai)
+  arr.forEach( remainder)
    return arr 
 };
-function mai  (Element,index ,arr) {
+function  remainder  (Element,index ,arr) {
   if (Element%3 === 2){
     arr.pop();
   } 
-}
+};
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 6
 
@@ -153,8 +149,7 @@ const fizzbuzz = (arr) => {
     }else if (element%3===0){
       fizzbuzzArray.push ('Fizz') ;
     }else if (element%5===0){
-      fizzbuzzArray.push('B
-      +uzz')
+      fizzbuzzArray.push('Buzz')
     }else 
     fizzbuzzArray.push(element)
   })
