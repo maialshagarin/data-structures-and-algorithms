@@ -33,9 +33,11 @@ CHALLENGE 3
 Write a function named sortByLength that takes in an array of strings and returns the same array, with the strings sorted by their length, lowest to highest.
 ------------------------------------------------------------------------------------------------ */
 
-const sortByLength = (arr) => {
-  // Solution code here...
-};
+const sortByLength = arr => {
+    return arr.sort((a, b) => a.length - b.length);
+  };
+
+
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 4
@@ -46,8 +48,10 @@ For example, ['Alphabet', 'alphabet', 'carrot', 'Zebra'] is correctly sorted, an
 ------------------------------------------------------------------------------------------------ */
 
 const alphabetizeBetter = (arr) => {
+    return arr.sort((a, b) => (a.toLowerCase() < b.toLowerCase() ? -1 : 1));
+
   // Solution code here...
-};
+    };
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 5
