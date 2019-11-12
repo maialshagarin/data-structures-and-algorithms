@@ -1,5 +1,8 @@
+<<<<<<< HEAD
+=======
 
 
+>>>>>>> 7bab0de9826d5ae84dc9e66541d13016d6be2274
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 1
 
@@ -11,7 +14,7 @@ Then, write a function named speaker that takes in a string and a callback funct
 const greeting = (word) => {
     return word.toUpperCase();   // Solution code here...
 };
-
+                           
 const speaker = (message, callback) => {
     return callback(message);  // Solution code here...
 };
@@ -67,7 +70,7 @@ const removeElements = (arr, callback) => {
     for (let i = 0; i < arr.length; i++) {
         callback(arr[i], arr);
       }
-      return arr; // Solution code here...
+      return arr; 
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -77,7 +80,8 @@ Write a function named removeWithForEach that produces the same output as challe
 ------------------------------------------------------------------------------------------------ */
 
 const removeWithForEach = (arr, callback) => {
-  // Solution code here...
+  arr.forEach(Element =>  callback(Element,arr));
+  return arr ;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -91,8 +95,13 @@ This anonymous function should accept up to three arguments: the element, the in
 ------------------------------------------------------------------------------------------------ */
 
 const removeWithAnon = (arr) => {
-  // Solution code here...
+  arr.forEach(function (Element,index ,arr) {
+if (Element%3 === 2){
+  arr.pop();
+}  });
+return arr 
 };
+
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 6
@@ -112,6 +121,13 @@ This function should use forEach to populate your grocery list based on the stor
 ------------------------------------------------------------------------------------------------ */
 
 const createList = (availableItems) => {
+  let list = [];
+  availableItems.forEach ((element) => {
+    if(element.available=== true ){
+    list.push(element.name);
+  }
+  });
+  return list ; 
   // Solution code here...
 };
 
@@ -130,7 +146,18 @@ Return the resulting output array.
 ------------------------------------------------------------------------------------------------ */
 
 const fizzbuzz = (arr) => {
-  // Solution code here...
+  let fizzbuzzArray = [];
+  arr.forEach((element)=>{
+    if (element%3 === 0 && element%5 === 0){
+      fizzbuzzArray.push('Fizz Buzz');
+    }else if (element%3===0){
+      fizzbuzzArray.push ('Fizz') ;
+    }else if (element%5===0){
+      fizzbuzzArray.push('Buzz')
+    }else 
+    fizzbuzzArray.push(element)
+  })
+  return fizzbuzzArray// Solution code here...
 };
 
 /* ------------------------------------------------------------------------------------------------
