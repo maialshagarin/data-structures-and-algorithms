@@ -90,7 +90,11 @@ This anonymous function should accept up to three arguments: the element, the in
 ------------------------------------------------------------------------------------------------ */
 
 const removeWithAnon = (arr) => {
-  // Solution code here...
+  arr.forEach(function (Element,index ,arr) {
+if (Element%3 === 2){
+  arr.pop();
+}  });
+return arr 
 };
 
 /* ------------------------------------------------------------------------------------------------
