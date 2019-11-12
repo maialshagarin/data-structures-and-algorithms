@@ -1,8 +1,4 @@
-<<<<<<< HEAD
-=======
-
-
->>>>>>> 7bab0de9826d5ae84dc9e66541d13016d6be2274
+'use strict';
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 1
 
@@ -95,14 +91,14 @@ This anonymous function should accept up to three arguments: the element, the in
 ------------------------------------------------------------------------------------------------ */
 
 const removeWithAnon = (arr) => {
-  arr.forEach(function (Element,index ,arr) {
-if (Element%3 === 2){
-  arr.pop();
-}  });
-return arr 
+  arr.forEach( remainder)
+   return arr 
 };
-
-
+function  remainder  (Element,index ,arr) {
+  if (Element%3 === 2){
+    arr.pop();
+  } 
+};
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 6
 
