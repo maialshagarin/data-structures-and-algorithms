@@ -95,14 +95,14 @@ This anonymous function should accept up to three arguments: the element, the in
 ------------------------------------------------------------------------------------------------ */
 
 const removeWithAnon = (arr) => {
-  arr.forEach(function (Element,index ,arr) {
-if (Element%3 === 2){
-  arr.pop();
-}  });
-return arr 
+  arr.forEach(mai)
+   return arr 
 };
-
-
+function mai  (Element,index ,arr) {
+  if (Element%3 === 2){
+    arr.pop();
+  } 
+}
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 6
 
@@ -153,7 +153,8 @@ const fizzbuzz = (arr) => {
     }else if (element%3===0){
       fizzbuzzArray.push ('Fizz') ;
     }else if (element%5===0){
-      fizzbuzzArray.push('Buzz')
+      fizzbuzzArray.push('B
+      +uzz')
     }else 
     fizzbuzzArray.push(element)
   })
