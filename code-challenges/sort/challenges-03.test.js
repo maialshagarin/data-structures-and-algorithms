@@ -67,6 +67,8 @@ Here is an example of the input:
 ------------------------------------------------------------------------------------------------ */
 
 const sortByPrice = (arr) => {
+  return  arr.sort((a, b) => parseFloat(a.price) - parseFloat(b.price));
+
   // Solution code here...
 };
 
@@ -79,7 +81,10 @@ For example, [1, 14, 0.2, -281, 54782] is only correctly sorted in that order.
 ------------------------------------------------------------------------------------------------ */
 
 const sortNumbersByLength = (arr) => {
+    return arr.sort((a, b) =>  String(a).length - String(b).length);
+
   // Solution code here...
+  3
 };
 
 /*-----------------------------------------------------------------------------------------------
@@ -101,6 +106,8 @@ const people = [
 ];
 
 const sortPeople = (arr) => {
+    return arr.sort((a, b) => (a.lastName < b.lastName ? -1 : 1));
+
   // Solution code here...
 };
 
