@@ -27,7 +27,13 @@ Return an array containing all the matches.
 ------------------------------------------------------------------------------------------------ */
 
 const isCapitalized = (str) => {
-  // Solution code here...
+
+    const regex = /\b[A-Z]\w*/g;
+  const matches = str.match(regex)
+  return matches ? matches :[];
+
+    // Solution code here...
+
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -38,6 +44,7 @@ Write a function named citiesAtoJ that takes in an array of city names and uses 
 
 const citiesAtoJ = (arr) => {
   // Solution code here...
+  var array =/[A-J]
 };
 
 /* ------------------------------------------------------------------------------------------------
