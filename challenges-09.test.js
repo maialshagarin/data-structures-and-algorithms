@@ -99,8 +99,10 @@ Note: You must use reduce for this challenge. You may not use the built-in .reve
 const reversedString = (str) => {
   // Solution code here...
   let newThing = str.split('')
-  let reversed = newThing.reduce ((newstring , currentlatter)=> 
-  return newstring +)
+  let reversed = newThing.reduce ((newstring , currentlatter)=> {
+  return currentlatter + newstring ;
+}, '')
+return reversed ;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -154,7 +156,19 @@ const characters = [
 
 const countNumberOfChildren = (arr) => {
     // solution is here
-
+    const numOfChild = arr.reduce( (acc,num) =>
+    {
+      if (num.children.length != 0)
+      {
+          let acc = acc + num.children.length
+        return acc ;
+      }
+      else {
+        return acc;
+      }
+    },0);
+    return numOfChild;
+  
 };
 
 /* ------------------------------------------------------------------------------------------------
