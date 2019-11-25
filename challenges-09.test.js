@@ -70,8 +70,23 @@ let starWarsData = [{
 }];
 
 const returnNames = (arr) => {
+//   Solution code here...
+const charNames = arr.reduce( (acc,val) => {
+    acc.push( val.name );
+    return acc ;
+  }, [] );
+  return charNames ;
   // Solution code here...
+//   const names = arr.reduce( (acc, val, idx) => {
+//     return( val.name );
+//     return acc;
+//   }, [] );
+
+//  let name = arr.reduce( function(acc , value ,idx ){
+//      return acc   
+//      } , [])
 };
+
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 3
@@ -83,6 +98,9 @@ Note: You must use reduce for this challenge. You may not use the built-in .reve
 
 const reversedString = (str) => {
   // Solution code here...
+  let newThing = str.split('')
+  let reversed = newThing.reduce ((newstring , currentlatter)=> 
+  return newstring +)
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -135,8 +153,8 @@ const characters = [
 ];
 
 const countNumberOfChildren = (arr) => {
-    let name = char
-  // Solution code here...
+    // solution is here
+
 };
 
 /* ------------------------------------------------------------------------------------------------
