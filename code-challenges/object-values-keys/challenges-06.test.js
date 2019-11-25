@@ -1,5 +1,4 @@
 'use strict';
-
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 1
 
@@ -73,8 +72,8 @@ let characters = [
 const getHouses = (arr) => {
   let houses = [];
   arr.forEach(houseName => {
-    houses.push(houseName.house);
-});
+        houses.push(houseName.house);
+    });
   // Solution code here...
   return houses;
 };
@@ -92,9 +91,17 @@ hasChildrenValues(characters, 'Sansa') will return false
 ------------------------------------------------------------------------------------------------ */
 
 const hasChildrenValues = (arr, character) => {
-  // Solution code here...
+  //// solution here
+  let hasChildren = false;
+  arr.forEach(val => {
+    const values = Object.values(val);
+    if (values[0] === character && values[2].length > 0) {
+      hasChildren = true;
+    }
+  });
+  return hasChildren;
+}
 
-};
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 4
