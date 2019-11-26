@@ -52,15 +52,8 @@ For example, notInFirstArray([1,2,3], [1,2,3,4]) returns [4].
 ------------------------------------------------------------------------------------------------ */
 
 const notInFirstArray = (forbiddenValues, arr) => {
-  return arr.filter ( (num) => !forbiddenValues.include(num)
-  )
-//   const notIncElements = arr.filter(element =>
-//     {
-//       !forbiddenValues.includes(element);
-//     });
-//     return notIncElements;
-// // }
-  // Solution code here...
+  return arr.filter(num => !forbiddenValues.includes(num));
+
 };
 
 /* ------------------------------------------------------------------------------------------------
