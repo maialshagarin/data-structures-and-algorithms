@@ -31,11 +31,16 @@ const filterStringsWithVowels = (arr) => {
   // Solution code here...
   let vowels = /^[aeiou]/i;
   const newWord = arr.filter (function (words){
-    return vowels.test(words)
+    return vowels.test(word);
+
+    const strVowels = arr.filter( (value,idx) =>
+    {
+      return rex.test(value);
     });
-    return newWord;
-  };
+    return strVowels;
   
+  })
+};
 
 
 /* ------------------------------------------------------------------------------------------------
@@ -47,7 +52,8 @@ For example, notInFirstArray([1,2,3], [1,2,3,4]) returns [4].
 ------------------------------------------------------------------------------------------------ */
 
 const notInFirstArray = (forbiddenValues, arr) => {
-  // Solution code here...
+  return arr.filter(num => !forbiddenValues.includes(num));
+
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -92,6 +98,7 @@ const snorlaxData = {
 const getBaseStatGreaterThan = (arr, minBaseStat) => {
   // Solution code here...
 };
+//////////////////////////////////////////////
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 5
