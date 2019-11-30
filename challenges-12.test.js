@@ -25,7 +25,17 @@ const cookieStores = [firstPike, seaTac, seattleCenter, capHill, alkiBeach];
 const grandTotal = (stores) => {
   // Solution code here...
 
+  let theSum = new Array(stores[0].length).fill(0);
+
+  for (let i = 0; i<stores.length; i++){
+    for (let j = 0; j<stores[i].length; j++){
+      let value= stores[i][j];
+      theSum[j]+=value;
+    }
+  }
+  return theSum;
 };
+
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 2
@@ -39,6 +49,7 @@ Write a function named salesData that uses forEach to iterate over the hourlySal
 
 const salesData = (hours, data) => {
   // Solution code here...
+
 };
 
 /* ------------------------------------------------------------------------------------------------
