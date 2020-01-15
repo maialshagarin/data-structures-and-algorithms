@@ -7,6 +7,7 @@ Write a function named sortBackwards that takes in an array of numbers and retur
 ------------------------------------------------------------------------------------------------ */
 
 const sortBackwards = (arr) => {
+  
     return arr.sort((a,b)=> b-a) ;
         
   // Solution code here...
@@ -106,7 +107,8 @@ const people = [
 ];
 
 const sortPeople = (arr) => {
-    return arr.sort((a, b) => (a.lastName < b.lastName ? -1 : 1));
+    // return arr.sort((a, b) => (a.lastName < b.lastName ? -1 : 1));
+    return arr.sort((a, b) => (a.lastName > b.lastName ));
 
   // Solution code here...
 };
@@ -161,6 +163,15 @@ const meetings = [
 ];
 
 const sortMeetingsByDay = (arr) => {
+  let TheOrderOfDayOfWeek = {
+    Monday: 1,
+    Tuesday: 2,
+    Wednesday: 3,
+    Thursday: 4,
+  }
+  return arr.sort((a,b)=>{
+    return TheOrderOfDayOfWeek[a.dayOfWeek] - TheOrderOfDayOfWeek[b.dayOfWeek]
+  })
   // Solution code here...
 };
 
@@ -176,6 +187,16 @@ You DO NOT need to use your solution to Challenge 9 in completing Challenge 10.
 
 const sortSchedule = (arr) => {
   // Solution code here...
+  const sortedByDay = sortMeetingsByDay(arr);
+  return sortedByDay.sort((a, b) => {
+    if(a.dayOfWeek === b.dayOfWeek){      
+
+      if(a.start === b.start){              
+        return a.end - b.end;               
+      }
+      return a.start - b.start;
+    }
+  })
 };
 
 /* ------------------------------------------------------------------------------------------------
