@@ -12,8 +12,10 @@ const courseInfo = { name: 'Code 301', duration: { dayTrack: '4 weeks', eveningT
 };
 
 const getCourseKeys = (obj) => {
+  let show = Object.keys(courseInfo)
+  return(show);
   // Solution code here...
-  return Object.keys(obj) ;
+  // return Object.keys(obj) ;
 
 };
 
@@ -74,7 +76,7 @@ const getHouses = (arr) => {
   arr.forEach(houseName => {
         houses.push(houseName.house);
     });
-  // Solution code here...
+  // // Solution code here...
   return houses;
 };
 
@@ -95,6 +97,7 @@ const hasChildrenValues = (arr, character) => {
   let hasChildren = false;
   arr.forEach(val => {
     const values = Object.values(val);
+
     if (values[0] === character && values[2].length > 0) {
       hasChildren = true;
     }
@@ -113,6 +116,14 @@ The input and output of this function are the same as the input and output from 
 
 const hasChildrenEntries = (arr, character) => {
   // Solution code here...
+  let hasChildren = false ;
+  arr.forEach(val => {
+    const values = Object.entries(val);
+    if (values[0][1] === character && values[2][1].length > 0) {
+      hasChildren = true;
+    }
+  });
+  return hasChildren;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -122,7 +133,22 @@ Write a function named totalCharacters that takes in an array and returns the nu
 ------------------------------------------------------------------------------------------------ */
 
 const totalCharacters = (arr) => {
+
   // Solution code here...
+  let values = Object.values(arr)
+  // console.log("first",values);
+  let counterNumOfCharacters = 0
+
+  values.forEach( val =>{
+    let secondValues = Object.values(val) ;
+    // console.log( "second",secondValues) ;
+    secondValues.forEach( character =>{
+      if (character){
+      counterNumOfCharacters++
+      }
+    })
+  })
+  return counterNumOfCharacters
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -137,6 +163,26 @@ For example: [{ house: 'Stark', members: 7 }, { house: 'Arryn', members: 3 }, ..
 
 const houseSize = (arr) => {
   const sizes = [];
+  Object.values(arr).forEach(property => {
+    let count=0;
+    count++;
+    if (property.spouse){
+       count++;
+    count +=property.children.length;
+    }
+    sizes.push({ 'house': property.house, 'members': count })
+  })
+  // let values = Object.values(arr);
+  // console.log('val' , values)
+  // values.forEach( element =>{
+  //   let counter = 0 ;
+  //   // counter++
+  //   console.log('element :' , element)
+  //   counter = element.children.length ;
+  // //  let  mai = element.length -1 ;
+  //   console.log('counter', counter)
+  //   sizes.push({'house' :element.house , 'members' :counter }) 
+  //    }   )
   // Solution code here...
   return sizes;
 };
